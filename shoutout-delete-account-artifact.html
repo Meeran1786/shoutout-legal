@@ -1,0 +1,236 @@
+<title>Delete Your ShoutOut Account</title>
+<style>
+  :root {
+    --bg: #fbfaff;
+    --surface: #ffffff;
+    --text: #1a1a2e;
+    --muted: #5b5b6e;
+    --accent: #6c4cf1;
+    --accent-soft: #efe9ff;
+    --border: #e6e4f0;
+    --warn-bg: #fff2ec;
+    --warn-border: #f2c9b3;
+    --warn-text: #8a3f1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #100f1a;
+      --surface: #171624;
+      --text: #f2f1f9;
+      --muted: #a6a4bd;
+      --accent: #a68bff;
+      --accent-soft: #241f3d;
+      --border: #2b2940;
+      --warn-bg: #2b1c14;
+      --warn-border: #5a3a20;
+      --warn-text: #f2b487;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #100f1a;
+    --surface: #171624;
+    --text: #f2f1f9;
+    --muted: #a6a4bd;
+    --accent: #a68bff;
+    --accent-soft: #241f3d;
+    --border: #2b2940;
+    --warn-bg: #2b1c14;
+    --warn-border: #5a3a20;
+    --warn-text: #f2b487;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.65;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 48px 96px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #4a6cf7, var(--accent));
+    flex-shrink: 0;
+  }
+  .brand-name {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-family: "Libre Franklin", -apple-system, sans-serif;
+    font-weight: 800;
+    font-size: clamp(26px, 5vw, 34px);
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+
+  .updated {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 28px;
+  }
+
+  .intro {
+    font-size: 16px;
+    margin: 0 0 36px;
+    max-width: 62ch;
+  }
+
+  .steps {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 8px 24px;
+    margin-bottom: 32px;
+  }
+  .steps ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .steps li {
+    margin: 20px 0;
+    font-size: 15.5px;
+  }
+  .steps li:first-child { margin-top: 24px; }
+  .steps li:last-child { margin-bottom: 24px; }
+  .steps strong { color: var(--accent); }
+  code {
+    background: var(--accent-soft);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.95em;
+  }
+
+  .warn {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-text);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+  .warn strong { display: block; margin-bottom: 4px; }
+
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+    max-width: 62ch;
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 12px;
+    color: var(--accent);
+  }
+
+  p { margin: 0 0 10px; font-size: 15.5px; }
+  p:last-child { margin-bottom: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin-top: 8px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 44px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true"></div>
+    <div class="brand-name">SHOUTOUT</div>
+  </div>
+
+  <h1>Delete Your Account</h1>
+  <p class="updated">Last updated: September 28, 2026</p>
+
+  <p class="intro">This page explains how to request deletion of your ShoutOut account and the data associated with it. This applies to both Creator and Business accounts.</p>
+
+  <div class="steps">
+    <ol>
+      <li>Send an email to <strong><a href="mailto:privacy@shout-out.me">privacy@shout-out.me</a></strong> from the email address registered on your ShoutOut account, with the subject line <code>Delete my account</code>.</li>
+      <li>Include your account's registered email address and whether you are a <strong>Creator</strong> or <strong>Business</strong> account, so we can locate it quickly.</li>
+      <li>We will verify the request and confirm back to you by email, then process the deletion. This is completed within <strong>30 days</strong> of a verified request.</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <strong>Before you request deletion</strong>
+    Deleting your account is permanent and cannot be undone. Any active campaigns, pending applications, unread messages, or wallet balance tied to the account will no longer be accessible to you.
+  </div>
+
+  <section>
+    <h2>What gets deleted</h2>
+    <p>Your profile information (name, bio, photos, portfolio/rate card, niches, industry details), your account credentials, connected social account tokens, messages you've sent, and reviews/reports tied to your identity are deleted or de-identified from active systems.</p>
+  </section>
+
+  <section>
+    <h2>What we retain, and why</h2>
+    <table>
+      <tr><th>Data</th><th>Why it's kept</th><th>Retention</th></tr>
+      <tr><td>Wallet transaction records, invoices, payout records</td><td>Financial/tax recordkeeping obligations (Razorpay/RazorpayX-processed transactions)</td><td>As required by applicable financial and tax law</td></tr>
+      <tr><td>Reports filed against or by the account</td><td>Trust &amp; safety history, to prevent abuse of the platform</td><td>Retained in de-identified form</td></tr>
+      <tr><td>Basic server logs referencing the account</td><td>Security and fraud investigation</td><td>Rolling retention window, then purged</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Partial data requests</h2>
+    <p>If you'd like us to correct, export, or delete specific pieces of your data without closing your account entirely, email <a href="mailto:privacy@shout-out.me">privacy@shout-out.me</a> with the details — you don't need to delete your whole account to exercise this.</p>
+  </section>
+
+  <section>
+    <h2>Related</h2>
+    <p>See our <a href="https://claude.ai/artifact/ALxkJw3tZgLFyo15azK5Mh" target="_blank" rel="noopener">Privacy Policy</a> for the full detail on what we collect and how it's used.</p>
+  </section>
+
+  <footer>&copy; 2026 ShoutOut.</footer>
+</div>
